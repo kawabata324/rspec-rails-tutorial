@@ -26,4 +26,10 @@ RSpec.describe "StaticPages", type: :system do
       expect(page).to have_title "About | #{@base_title}"
     end
   end
+  describe "#contact" do
+    scenario "タイトルが正しいこと" do
+      visit "/static_pages/contact"
+      expect(page).to have_title "Contact | #{@base_title}"
+    end
+  end
 end

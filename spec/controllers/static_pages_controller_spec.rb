@@ -22,4 +22,11 @@ RSpec.describe StaticPagesController, type: :controller do
       expect(response.status).to eq 200
     end
   end
+  describe "#contact" do
+    it do
+      get :contact
+      expect(response).to be_successful
+      expect(response.status).to eq 200
+    end
+  end
 end
