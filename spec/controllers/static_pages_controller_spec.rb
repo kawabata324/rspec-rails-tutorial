@@ -15,4 +15,11 @@ RSpec.describe StaticPagesController, type: :controller do
       expect(response.status).to eq 200
     end
   end
+  describe "#about" do
+    it do
+      get :about
+      expect(response).to be_successful
+      expect(response.status).to eq 200
+    end
+  end
 end
